@@ -1,5 +1,7 @@
 /* ===== RESET CSS básico ===== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,23 +10,56 @@
 
 /* ===== ESTILOS BASE ===== */
 body {
-  
-  font-family: "Macondo Swash Caps",system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  font-family: "Macondo Swash Caps", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: orangered;
-}
-h1{
-  text-align: center;
-}
-h2{
-  color: #e63900; 
+  background: linear-gradient(to bottom, #ff260081, #1a0000);
 }
 
-#hero img{
-  border-radius: 10px;           
+h1 {
+  font-size: 400px;
+  text-align: center;
+  background: linear-gradient(to bottom, #1a0000, #c16a5c);
+  color: #ff2600;
+  text-shadow: #ff2600 0 0 4px;
+  margin: 0 0 10px 0;
+  height: auto;
+  width: auto;
+  position: relative;
+
+
+
+}
+
+h1 img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  opacity: 0.5;
+  border-radius: 10px ;
+
+}
+
+h2 {
+  font-size: 40px;
+  color: #e63900;
+  text-shadow: 0 0 4px #ff2600;
+}
+
+#hero img {
+  border-radius: 10px;
   margin: 10px auto;
   padding: 10px auto;
+}
+
+a {
+  color: #26ff00;
+  text-shadow: 0 0 4px #26ff00;
 }
 
 /* TODO: Alinear el contenido de main, poner colores de fondo, etc. */
@@ -37,61 +72,85 @@ main {
 }
 
 /* ===== CABECERA Y MENÚ SUPERIOR ===== */
-.main-nav{
+.main-nav {
   text-align: center;
+  height: 24px;
+  width: 24px auto;
+  font-size: 30px;
 }
-#galeria{
+.main-nav img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  opacity: 0.5;
+  border-radius: 10px ;
+}
+
+#galeria {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
 }
-#galeria img{
-  border-radius: 10px;           
-  max-width:300px ;
+
+#galeria img {
+  border-radius: 10px;
+  max-width: 300px;
   height: auto;
   max-height: fit-content;
- 
-}
-#tabla table{
-  width: fit-content;
-    margin:10px auto;
-    border-collapse: collapse;
-    background: #1a1a1a;
-    color: #e63900;                     
-    font-size: 18px;
-    text-shadow: 0 0 4px #ff2600;
-    box-shadow: 0 0 20px #ff2600aa;
-    
-}
-#tabla th{
-  background: linear-gradient(to bottom, #500000, #1a0000);
-    padding: 12px;
-    border-bottom: 2px solid #ff2600;
-    font-size: 20px;
-     border-collapse: collapse;
-}
-.videojuego{
-  background: linear-gradient(to bottom, #500000, #1a0000);
-    padding: 12px;
-    border-bottom: 2px solid #ff2600;
-    font-size: 20px;
-     border-collapse: collapse;
+  margin: 10px auto;
+  box-shadow: 0 0 20px #ff2600aa;
+
 }
 
-#tabla td{
+#tabla table {
+  width: fit-content;
+  margin: 10px auto;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: #e63900;
+  font-size: 30px;
+  text-shadow: 0 0 4px #ff2600;
+  box-shadow: 0 0 20px #ff2600aa;
+
+}
+
+#tabla th {
+  background: linear-gradient(to bottom, #500000, #1a0000);
+  padding: 12px;
+  border-bottom: 2px solid #ff2600;
+  font-size: 30px;
+  border-collapse: collapse;
+}
+
+.videojuego {
+  background: linear-gradient(to bottom, #500000, #1a0000);
+  padding: 12px;
+  border-bottom: 2px solid #ff2600;
+  font-size: 30px;
+  border-collapse: collapse;
+}
+
+#tabla td {
   border-radius: 2px;
   border-collapse: collapse;
   padding: 10px;
   border: 5px outset #a81c1c;
 }
 
+p {
+  text-shadow: 0 0 4px #ffea00;
+  color: #ffea00;
+}
 
 
 
-.main-nav a:hover{
-    background-color: darkred;
-    border-radius: 10px;           
+.main-nav a:hover {
+  background-color: darkred;
+  border-radius: 10px;
   /* TODO: Estilo de enlaces del menú superior (color, padding, :hover, etc.) */
 }
 
@@ -101,19 +160,20 @@ main {
   top: 14px;
   left: 14px;
   z-index: 20;
-  font-size: 26px;
+  font-size: 30px;
   /* TODO: Colores, borde, padding, etc. */
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  background-color: coral;
+  background-color: rgb(55, 54, 54);
+  color: #ff2600;
   margin: auto;
   padding: auto;
-  border-radius: 10px;           
+  border-radius: 10px;
 }
 
 /* Efecto visual cuando el menú está abierto */
 .open-menu.active {
- 
+
   /* TODO: Cambia color de fondo, rota un poco el icono, etc. */
 }
 
@@ -121,23 +181,25 @@ main {
 .side-menu {
   position: fixed;
   top: 0;
-  left: -230px;            /* oculto inicialmente */
+  left: -230px;
+  /* oculto inicialmente */
   width: 230px;
   height: 100%;
   /* TODO: color de fondo, color de texto… */
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 15;
-  border-radius: 10px;           
- 
+  border-radius: 10px;
+
 }
 
 .side-menu.active {
-  left: 0;  
-    background-color: coral;
+  left: 0;
+  background-color: rgb(55, 54, 54);
   margin: auto;
-  padding: auto;    
-  border-radius: 10px;           /* aparece cuando tiene la clase "active" */
+  padding: auto;
+  border-radius: 10px;
+  /* aparece cuando tiene la clase "active" */
 }
 
 .side-menu ul {
@@ -154,24 +216,32 @@ main {
 /* TODO: Añade :hover para los enlaces del menú lateral */
 .side-menu a:hover {
   background-color: darkred;
-  border-radius: 10px;           
+  border-radius: 10px;
 }
-
+/* ===== FORMULARIO ===== */
+#formulario {
+   text-shadow: 0 0 4px #ffea00;
+  color: #ffea00;
+  font-size: 30px;
+}
+#formulario input{
+  accent-color: darkred;
+}
 /* ===== PIE DE PÁGINA ===== */
 .site-footer {
   bottom: 0;
   padding: 15px;
-  width:100%;
+  width: 100%;
   left: 0;
   text-align: center;
   border-radius: 10px;
-  background-color: coral;
-  color: white;
-          
+  background-color: rgb(55, 54, 54);
+
+
   /* TODO: estilo del footer (color de fondo, texto centrado, padding…) */
 }
 
 .site-footer a {
-  
+
   /* TODO: estilo del enlace del footer y :visited si lo deseas */
 }
