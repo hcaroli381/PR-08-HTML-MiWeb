@@ -219,13 +219,29 @@ p {
   border-radius: 10px;
 }
 /* ===== FORMULARIO ===== */
-#formulario {
+#formulario label {
    text-shadow: 0 0 4px #ffea00;
   color: #ffea00;
   font-size: 30px;
 }
 #formulario input{
   accent-color: darkred;
+}
+#aclaracion{
+  font-size: 15px;
+}
+#nota{
+  font-size: 30px;
+}
+/* ===== CONTACTO ===== */
+#contacto img{
+  border-radius: 10px;
+  max-width: 100px;
+  height: auto;
+  max-height: fit-content;
+  margin: 10px auto;
+  
+
 }
 /* ===== PIE DE PÁGINA ===== */
 .site-footer {
@@ -241,7 +257,7 @@ p {
   /* TODO: estilo del footer (color de fondo, texto centrado, padding…) */
 }
 
-.site-footer a {
-
+.site-footer a:visited{
+  color: pink ;
   /* TODO: estilo del enlace del footer y :visited si lo deseas */
 }

@@ -126,7 +126,8 @@
     <!-- SECCIÓN FORMULARIO -->
     <section id="formulario">
       <h2>Formulario</h2>
-      <label for="juegoFavorito">Juego favorito</label>
+      <form>
+      <label for="juego">Juego favorito
         <select name="juego" id="juego">
           <option>DOOM Eternal</option>
           <option>DOOM 2016</option>
@@ -135,7 +136,8 @@
           <option>DOOM 3</option>
           <option>DOOM : The Dark Ages</option>
         </select>
-        <p>Introduce la nota que le pondrías 1-5 a Doom : The Dark Ages</p>
+        </label>
+        <p class="notas">Introduce la nota que le pondrías 1-5 a Doom : The Dark Ages</p>
         <label>
 
         <input type="radio" name="Nota" value="1">
@@ -143,30 +145,37 @@
         </label>
         <label>
 
-        <input type="radio" name="Nota" value="1">
+        <input type="radio" name="Nota" value="2">
         2
         </label>
         <label>
 
-        <input type="radio" name="Nota" value="1">
+        <input type="radio" name="Nota" value="3">
         3
         </label>
         <label>
 
-        <input type="radio" name="Nota" value="1">
+        <input type="radio" name="Nota" value="4">
         4
         </label>
         <label>
 
-        <input type="radio" name="Nota" value="1">
+        <input type="radio" name="Nota" value="5">
         5
         </label>
         <label>
 
-        <input type="radio" name="Nota" value="1">
+        <input type="radio" name="Nota" value="null">
         No jugado
         </label>
-        <p>Los datos introducidos son recopilados sin interés lucrativo</p>
+        <br>
+        <label>
+          Edad: <input type="number" min="16" placeholder="16">
+        </label><br>
+
+        <input type="submit" value="Enviar formulario">
+        </form>
+        <p class="aclaracion">Los datos introducidos son recopilados sin interés lucrativo y su envío es totalmente voluntario.</p>
 
       <!-- TODO: Crear un formulario con al menos 3 campos y un botón de envío -->
     </section>
@@ -177,6 +186,19 @@
     <!-- SECCIÓN CONTACTO / CIERRE -->
     <section id="contacto">
       <h2>Contacto</h2>
+      <p>¡No dudes en contactarme si te ha gustado la web, cualquier sugerencia es bienvenida!</p>
+      <p>Correo de contacto : <a href="hcaroli381@g.educaand.es">hcaroli381@g.educaand.es</a></p>
+      <p>Mis redes sociales :</p>
+      <span>
+      <img src="./images/img_08.png" alt="instagramIcon"> 
+      </span>
+      <a href="https://www.instagram.com/doom_fans/?hl=es">hcaroli381</a>
+      <span>
+        <img src="./images/img-07.png" alt="xIcon">
+      </span> 
+      <a href="https://x.com/DOOM">hcaroli381</a>
+      
+
       <!-- TODO: Texto, datos de contacto ficticios, redes, etc. -->
     </section>
 
